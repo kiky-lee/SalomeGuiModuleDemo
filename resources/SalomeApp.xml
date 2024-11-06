@@ -1,0 +1,18 @@
+<!DOCTYPE document>
+<document>
+ <section name="launch" >
+  <parameter name="modules" value="MYDEMO" />
+ </section>
+ <section name="MYDEMO" >
+  <parameter name="name" value="MyDemo" />
+  <parameter name="icon" value="OT.png" />
+  <parameter name="version" value="9.10.0" />
+  <parameter name="documentation" value="MYDEMO_help"/>
+ </section>
+ <section name="resources" >
+  <parameter name="MYDEMO" value="%MYDEMO_ROOT_DIR%/share/salome/resources/mydemo" />
+ </section>
+ <section name="MYDEMO_help">
+    <parameter name="User's Guide/%1 module/User's Guide" value="%OTGUI_DIR%/share/persalys/doc/html/index.html"/>
+ </section>
+</document>
