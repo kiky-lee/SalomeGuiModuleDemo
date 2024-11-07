@@ -61,3 +61,11 @@ MyDemoGui::~MyDemoGui()
 {
     // do nothing
 }
+
+extern "C"
+{
+    MYDEMO_EXPORT CAM_Module *createModule()
+    {
+        return new MyDemoGui("MYDEMO");
+    }
+}

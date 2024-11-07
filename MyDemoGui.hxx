@@ -1,11 +1,21 @@
 #ifndef __MYDEMOGUI_HXX__
 #define __MYDEMOGUI_HXX__
 
+#ifdef WIN32
+# if defined MYDEMO_EXPORTS || defined MyDemo_EXPORTS
+#   define MYDEMO_EXPORT __declspec(dllexport)
+# else
+#   define MYDEMO_EXPORT __declspec(dllimport)
+# endif
+#else
+# define MYDEMO_EXPORT
+#endif
+
 #include "LightApp_Module.h"
 
 #include <QObject>
 
-class MyDemoGui : public LightApp_Module
+class MYDEMO_EXPORT MyDemoGui : public LightApp_Module
 {
     Q_OBJECT
 public:
